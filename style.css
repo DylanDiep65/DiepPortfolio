@@ -1,0 +1,298 @@
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "MS Sans Serif", "Tahoma", sans-serif; 
+  background: #008080 url("https://images4.alphacoders.com/134/thumb-1920-1349540.png") no-repeat center center fixed;
+  background-size: cover;
+  overflow: hidden;
+}
+
+
+.browser-window {
+  width: 95vw;         
+  height: 90vh;        
+  background: #c0c0c0; 
+  border: 2px solid;
+  border-color: #ffffff #0a0a0a #0a0a0a #ffffff; 
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: none;}
+
+
+.window-title-bar {
+  background: #000080;  
+  color: #ffffff;
+  padding: 4px 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 12px;
+  cursor: default;
+}
+
+.window-controls {
+  display: flex;
+  gap: 2px;
+}
+
+.win-btn {
+  font-family: "Webdings", sans-serif; 
+  width: 18px;
+  height: 16px;
+  padding: 0;
+  background: #c0c0c0;
+  border: 1px solid;
+  border-color: #ffffff #808080 #808080 #ffffff;
+  cursor: pointer;
+}
+
+.win-btn:active {
+  border-color: #808080 #ffffff #ffffff #808080;
+  padding: 1px 0 0 1px;
+}
+
+.close-btn {
+  margin-left: 2px;
+}
+
+
+.browser-menu-bar {
+  display: flex;
+  gap: 12px;
+  padding: 4px 8px;
+  font-size: 11px;
+  border-bottom: 1px solid #808080;
+}
+
+.browser-menu-bar span { cursor: default; }
+.browser-menu-bar span:hover { background: #000080; color: #fff; }
+
+.browser-address-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px;
+  border-bottom: 2px solid #808080;
+}
+
+.nav-arrow {
+  background: #c0c0c0;
+  border: 1px solid;
+  border-color: #ffffff #808080 #808080 #ffffff;
+  padding: 2px 8px;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.address-input-wrapper {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  background: #ffffff;
+  border: 2px solid;
+  border-color: #808080 #ffffff #ffffff #808080; 
+  padding: 2px 6px;
+}
+
+.address-label {
+  font-size: 11px;
+  color: #404040;
+  margin-right: 6px;
+  font-weight: bold;
+}
+
+.address-input {
+  border: none;
+  width: 100%;
+  outline: none;
+  font-size: 12px;
+  font-family: monospace;
+}
+
+#tabs {
+  background: #c0c0c0  ;
+  border: none ;
+  padding: 4px  ;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+
+#tabs .ui-tabs-nav {
+  background: transparent  ;
+  border: none  ;
+  padding-left: 2px  ;
+}
+
+#tabs .ui-tabs-nav li {
+  background: #c0c0c0  ;
+  border: 2px solid  ;
+  border-color: #ffffff #808080 #c0c0c0 #ffffff  ;
+  border-top-left-radius: 0px  ;
+  border-top-right-radius: 0px  ;
+  margin-right: 2px  ;
+  top: 1px  ;
+}
+
+#tabs .ui-tabs-nav li.ui-tabs-active {
+  border-bottom-color: #c0c0c0  ;
+  padding-bottom: 1px  ;
+}
+
+.tab-content {
+  background: #ffffff;
+  border: 2px solid;
+  border-color: #808080 #ffffff #ffffff #808080; 
+  flex-grow: 1;
+  height: calc(100% - 100px);
+  overflow: hidden; 
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+#tags {
+  margin-left: 8px;
+  border: 2px solid;
+  border-color: #808080 #ffffff #ffffff #808080;
+  outline: none;
+  padding: 2px;
+}
+
+
+.masked-text {
+  font-size: 4rem;
+  font-weight: bold;
+  color: transparent;
+  text-align: center;
+  background-image: url('Dulan Port/purplepattern.jpg'); 
+  background-size: 200%;
+  background-position: 0 50%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate-background 5s infinite alternate linear;
+}
+
+@keyframes animate-background {
+  0% { background-position: 0 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+
+
+
+.grid-container1, .grid-container2 {
+  display: grid; 
+  grid-template-columns: 160px 1fr 180px; 
+  grid-template-rows: auto 1fr auto;
+  gap: 12px;
+  height: 100%; 
+  box-sizing: border-box;
+}
+
+.grid-container1 {
+  grid-template-areas:
+    "heading1 heading1 heading1"
+    "menu1    content1 right1"
+    "menu1    contact1 contact1";
+}
+
+.grid-container2 {
+  grid-template-areas:
+    "heading2 heading2 heading2"
+    "menu2    content2 right2"
+    "menu2    contact2 contact2";
+}
+
+
+.header1 { grid-area: heading1; background-color: #cfe2ff; padding: 15px; border: 2px solid #333; }
+.nav1    { grid-area: menu1; background-color: #ffe5b4; padding: 15px; border: 2px solid #333; }
+.main1   { grid-area: content1; background-color: #ffffff; padding: 15px; border: 2px solid #333; }
+.aside1  { grid-area: right1; background-color: #e2d5ff; padding: 15px; border: 2px solid #333; }
+.footer1 { grid-area: contact1; background-color: #d4edda; padding: 15px; border: 2px solid #333; }
+
+.header2 { grid-area: heading2; background-color: #ffcfcf; padding: 15px; border: 2px solid #333; }
+.nav2    { grid-area: menu2; background-color: #e5ffb4; padding: 15px; border: 2px solid #333; }
+.main2   { grid-area: content2; background-color: #ffffff; padding: 15px; border: 2px solid #333; }
+.aside2  { grid-area: right2; background-color: #d5ffff; padding: 15px; border: 2px solid #333; }
+.footer2 { grid-area: contact2; background-color: #fad4ff; padding: 15px; border: 2px solid #333; }
+
+.window-footer-bar {
+  padding-top: 6px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.retro-sys-btn {
+  background: #c0c0c0;
+  border: 1px solid;
+  border-color: #ffffff #0a0a0a #0a0a0a #ffffff;
+  color: #000000;
+  padding: 4px 14px;
+  text-decoration: none;
+  font-size: 11px;
+}
+
+.retro-sys-btn:active {
+  border-color: #0a0a0a #ffffff #ffffff #0a0a0a;
+}
+
+.main1, .main2 {
+  grid-area: content1; 
+  background-color: #ffffff; 
+  padding: 15px; 
+  border: 2px solid #333;
+  
+  overflow-y: auto; 
+  max-height: 100%; 
+}
+
+
+.main2 {
+  grid-area: content2;
+}
+
+
+.iframe-layout-wrapper {
+  display: flex;
+  flex-direction: row; 
+  align-items: center;  
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  gap: 20px; 
+}
+
+.iframe-side-text {
+  width: 25%; 
+  font-size: 12px;
+  line-height: 1.5;
+  color: #000;
+  background: #f4f4f4;
+  padding: 15px;
+  border: 2px solid;
+  border-color: #808080 #ffffff #ffffff #808080; 
+  box-sizing: border-box;
+}
+
+
+.tab-content {
+  background: #ffffff;
+  border: 2px solid;
+  border-color: #808080 #ffffff #ffffff #808080; 
+  flex-grow: 1;
+  height: calc(100% - 100px);
+  overflow: hidden; 
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}

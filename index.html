@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Dylan's Retro Desktop Portfolio</title>
+
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+</head>
+<body>
+
+  
+  <div id="dialog" title="Welcome Message">
+    <p>Welcome to my portfolio! Click through the different tabs to view and try some of the different projects I have done.</p>
+  </div>
+
+  <div class="browser-window">
+
+    <div class="window-title-bar">
+      <div class="title-text">Internet Explorer - Dylan Diep's Projects</div>
+      <div class="window-controls">
+        <button class="win-btn">0</button> 
+        <button class="win-btn">1</button> 
+        <button class="win-btn close-btn">r</button> 
+             <button class="win-btn">2</button> 
+      </div>
+    </div>
+
+
+    <div class="browser-menu-bar">
+      <span>Domo-File</span>
+      <span>Angel-Edit</span>
+      <span>Sam-View</span>
+      <span>Natty-Favorites</span>
+      <span>Haza-Tools</span>
+      <span>Brandon-Help</span>
+    
+    </div>
+
+    <div class="browser-address-bar">
+      <button class="nav-arrow">◀ Back</button>
+      <button class="nav-arrow">Forward ▶</button>
+      <div class="address-input-wrapper">
+        <span class="address-label">Address</span>
+        <input type="text" class="address-input" value="https://dylandieppro.com" readonly>
+      </div>
+    </div>
+
+
+    <div id="tabs">
+      <ul class="tabs-navigation-strip">
+      
+         <li><a href="#fragment-2"><span>Cafe Diep</span></a></li>
+         <li><a href="#fragment-3"><span>Hackathon</span></a></li>
+         <li><a href="#fragment-4"><span>DBZ Datesim</span></a></li>
+         <li><a href="#fragment-5"><span>DB Randomizer</span></a></li>
+         <li><a href="#fragment-6"><span>Music Plylst</span></a></li>
+      </ul>
+
+      <div id="fragment-2" class="tab-content">
+     <div class="iframe-layout-wrapper">
+          <iframe height="100%" style="width: 70%; min-height: 400px;" scrolling="no" title="Do Now: JS Arrays &amp; Lists" src="https://ig--dylandiep15.replit.app" frameborder="no" loading="lazy" allowtransparency="true"></iframe>
+          <p class="iframe-side-text">The Resturant project was a more design focused project for me. As each page allowed me to mix up design and colors to create this colorful feeling when visiting the site. I learned about image mapping and how to turn my pictures into clickable objects that can switch between HTML pages.</p>
+        </div>
+      </div>
+
+
+       
+      <div id="fragment-3" class="tab-content">
+        <div class="iframe-layout-wrapper">
+          <iframe height="100%" style="width: 70%; min-height: 400px;" scrolling="no" title="Untitled" src="https://codepen.io/editor/Dylan-Diep/pen/019e83b4-7e53-786d-8794-e3895f951b0a" frameborder="no" loading="lazy" allowtransparency="true"></iframe>
+          <p class="iframe-side-text">The Hackathon project was a way for me to expriement with using AI in order to design websites. It taught me new uses for AI, while allowing me to see a full vision for a site in the short time they gave us. The topic of making site to solve a school issue also forced my group to think outside of the box and to combine the real world with the work I do in the class.</p>
+        </div>
+      </div>
+
+   
+      <div id="fragment-4" class="tab-content">
+        <div class="iframe-layout-wrapper">
+          <iframe height="100%" style="width: 70%; min-height: 400px;" scrolling="no" title="Untitled" src="https://codepen.io/editor/Dylan-Diep/pen/019d1b6b-1405-7444-9426-dcdd9bcdc667" frameborder="no" loading="lazy" allowtransparency="true"></iframe>
+          <p class="iframe-side-text">The DBZ Dating Sim project is a choice-driven interactive visual novel built to test conditions It was a pretty early project that I did, but it was one that I found the concept as funny.</p>
+        </div>
+      </div>
+
+     
+      <div id="fragment-5" class="tab-content">
+        <div class="iframe-layout-wrapper">
+          <iframe height="100%" style="width: 70%; min-height: 400px;" scrolling="no" title="Do Now: JS Arrays &amp; Lists" src="https://dylandiep65.github.io/HELPDECIDEPROJECT/" frameborder="no" loading="lazy" allowtransparency="true"></iframe>
+          <p class="iframe-side-text">The DB randomizer was a list based project that made me revisit Json and the data list that comes with it. I had a struggle with trying to find an interval of numbers that the list would align with, but after trial and error it worked.</p>
+        </div>
+      </div>
+
+      <div id="fragment-6" class="tab-content">
+         <div class="iframe-layout-wrapper">
+          <iframe height="100%" style="width: 70%; min-height: 400px;" scrolling="no" title="Do Now: JS Arrays &amp; Lists" src="https://dylandiep65.github.io/MUSICPLAYLISTNEWANDIMPROVED/" frameborder="no" loading="lazy" allowtransparency="true"></iframe>
+          <p class="iframe-side-text">The Music Playlist project was the project I worked onn after the resturant project. This contrast the previous project since it was based more the function of the site and not it's design. I was able to allow inputs of custom songs to the site along side their image. But I could still work harder and fix the shuffle button, but I made up for that but including playable tracks of the featured songs on the site.</p>
+        </div>
+       </div>
+
+     
+      <div class="window-footer-bar">
+         <a href="index2.html" class="button-class retro-sys-btn">Log Out of PC</a>
+      </div>
+
+    </div> 
+  </div>
+
+  <script>
+    $( "#tabs" ).tabs();
+    $( function() { $( "#dialog" ).dialog(); } );
+
+    var availableTags = [
+      "Natty", "Haza", "Dylan", "Samster", "Angel", "Domo", "Dylan Diep",
+      "fruitfinder", "finalcapston", "earlydates", "musicplylist", "diepcafesom", "DylanDiepPro"
+    ];
+    $( "#tags" ).autocomplete({ source: availableTags });
+    $( "#menu" ).menu();
+  </script>
+</body>
+</html>
